@@ -13,7 +13,6 @@ const createTeam = async (knex, team) => {
 
 exports.seed = async (knex) => {
   try {
-    await knex('matches').del()
     await knex('teams').del()
 
     let teamPromises = teamsData.map(team => createTeam(knex, team));
