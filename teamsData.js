@@ -1,4 +1,4 @@
-const matchData = [
+const teamsData = [
    {
       "name": "Bayern Munich",
       "league": "German Bundesliga",
@@ -4141,4 +4141,4 @@ const matchData = [
    }
 ]
 
-module.exports = matchData;
+module.exports = teamsData;
