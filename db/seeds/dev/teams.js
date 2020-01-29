@@ -1,13 +1,25 @@
+const teamsData = require('../../../teamsData');
 
-exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+const createTeam = async (knex, team) => {
+  const teamId = await knex('teams').insert({
+    name: team.name,
+    league: team.league,
+    rank: team.rank,
+    spi: team.spi
+  }, 'id');
+
+  return teamId;
+}
+
+exports.seed = async (knex) => {
+  try {
+    await knex('matches').del()
+    await knex('teams').del()
+
+    let teamPromises = teamsData.map(team => createTeam(knex, team));
+
+    return Promise.all(teamPromises);
+  } catch (error) {
+    console.log(`Error seeding data: ${error}`);
+  }
 };
