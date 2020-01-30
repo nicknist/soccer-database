@@ -13,5 +13,9 @@
 |
 
 #### Error Responses:
+- For all GET requests, the success code 200 means that it was successful.
 - For all GET requests, the error code 500 means that the server is down. If there is an error or the information is not coming through, make sure to double check your url and that you're requesting the correct information
-- For all GET requests, the error code 404 means that the team or match has not been found. Please double 
+- For all GET requests, the error code 404 means that the team or match has not been found. Please double check the team or match id and try again
+- For all POST requests, the success code 201 means that there was a successful post request. It will return the object above.
+- For all POST requests, the error code of 422 means that there is a missing parameter. The error code will let you know what is missing.
+- For all POST requests, the error code of 500 means that the server is down. 
