@@ -1,4 +1,4 @@
-### Soccer Database
+# Soccer Database
 
 ## Endpoints Documentation
 
