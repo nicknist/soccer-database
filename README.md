@@ -8,14 +8,7 @@
 |Get all matches     |/api/v1/matches    | GET  | N/A          | All matches in the database in an array: ```[{ id: 7, date: "date", team1_name: "Barcelona", team1_score: 5, team2_name: "Real Madrid", team2_score: 0, created_at: "date", updated_at: "date" }]```|
 |Get a specific team |/api/v1/teams/:id  | GET  | N/A          | A specific team in the database in an object: ```{ id: 1, name: "Bayern Munich", league: "German Bundesliga", rank: 1, spi: 93.10, created_at: "date", updated_at: "date" }```|
 |Get a specific match|/api/v1/matches/:id| GET  | N/A          | A specific match in the database in an object: ```{ id: 7, date: "date", team1_name: "Barcelona", team1_score: 5, team2_name: "Real Madrid", team2_score: 0, created_at: "date", updated_at: "date" }```|
-|Post a new Team     |/api/v1/teams      | POST | ```{
-	"name": "Nick Team",
-	"league": "EPL",
-	"rank": 72,
-	"spi": 80
-}```                                                            | A new id from the team you posted in an object: ```{
-    "id": 14723
-}```|
+|Post a new Team     |/api/v1/teams      | POST | ```{"name": "Nick Team", "league": "EPL", "rank": 72, "spi": 80}```| A new id from the team you posted in an object: ```{ "id": 14723}```|
 |
 |
 
