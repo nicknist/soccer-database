@@ -13,3 +13,6 @@
 |
 |
 |
+
+#### Error Responses:
+- For all GET requests, the error code 500 means that the server is down. If there is an error or the information is not coming through, make sure to double check your url and that you're requesting the correct information
