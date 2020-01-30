@@ -103,6 +103,15 @@ app.post('/api/v1/matches', async (request, response) => {
   } catch (error) {
     response.status(500).json({ error });
   }
+});
+
+app.delete('/api/v1/matches/:id', async (request, response) => {
+  try {
+    await database('matches').where({ id: request.params.id }).del();
+    response.status(204).json();
+  } catch (error) {
+    response.status(500).json({ error });
+  }
 })
 
 app.listen(app.get('port'), () => {
