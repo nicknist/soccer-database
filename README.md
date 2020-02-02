@@ -1,5 +1,11 @@
 # Soccer Database
 
+## Project Overview
+
+- This project was to build our first backend and deploy it to heroku
+- Tech Stack: Node.js, Express, Knex, PostgreSQL, and JavaScript
+- The requirements were to create two tables that had at least a one-to-many relationship. This project has Soccer Teams and Soccer Matches, which is a many-to-many relationship. In order to accomplish this, I created a join table to make that relationship happen.
+
 ## Endpoints Documentation
 
 | Purpose            | URL                 | Verb   | Request Body | Sample Response (Happy Path) |
